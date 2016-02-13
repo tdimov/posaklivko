@@ -23,10 +23,6 @@ gulp.task('clean', cb => {
   rimraf(paths.destination, cb);
 });
 
-gulp.task('flow', shell.task([
-  'flow'
-], {ignoreErrors: true}));
-
 gulp.task('jshint', function() {
   return gulp.src(paths.js)
     .pipe(jshint('.jshintrc'))

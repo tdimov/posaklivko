@@ -4,7 +4,6 @@ import multer from 'multer';
 import morgan from 'morgan';
 
 const app = express();
-const upload = multer();
 const port = 3000;
 
 export class App {
