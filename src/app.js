@@ -1,6 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import multer from 'multer';
 import morgan from 'morgan';
 
 const app = express();
@@ -16,7 +15,7 @@ export class App {
     app.use(bodyParser.urlencoded({extended: true}));
 
     app.listen(port, () => {
-      console.log('Server is up and running on port ' + port);
+      console.log(`Server is up and running on port ${port}`);
     });
 
     app.get('/', (req, res) => {
