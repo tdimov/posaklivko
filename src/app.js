@@ -1,5 +1,6 @@
 import express from 'express';
 import {Express} from './config/express';
+import {Mongoose} from './config/mongoose';
 import {Config} from './config/config';
 
 const app = express();
@@ -10,6 +11,8 @@ export class App {
 
   start() {
     new Express(app, config);
+    new Mongoose(config);
+    
     app.listen(config.port, () => {
       console.log(`Server is up and running on port ${config.port}`);
     });

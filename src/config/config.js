@@ -10,7 +10,7 @@ export class Config {
     return {
       development: {
         rootPath: this.rootPath,
-        dbConnectionString: 'SET HERE YOUR CONNECTION STRING TO DATABASE FOR DEVELOPMENT',
+        dbConnectionString: 'mongodb://localhost/my_local_db',
         port: process.env.PORT || 3000
       },
       production: {
