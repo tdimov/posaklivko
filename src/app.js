@@ -1,21 +1,17 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import morgan from 'morgan';
+import {Express} from './config/express';
+import {Config} from './config/config';
 
 const app = express();
-const port = 3000;
+const config = new Config('development').config;
 
 export class App {
   constructor() {}
 
   start() {
-    app.use(express.static(__dirname + '/../public'));
-    app.use(morgan('dev'));
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({extended: true}));
-
-    app.listen(port, () => {
-      console.log(`Server is up and running on port ${port}`);
+    new Express(app, config);
+    app.listen(config.port, () => {
+      console.log(`Server is up and running on port ${config.port}`);
     });
 
     app.get('/', (req, res) => {
