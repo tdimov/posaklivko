@@ -3,7 +3,11 @@ import path from 'path';
 export class Config {
   constructor(configuration) {
     this.rootPath = path.normalize(__dirname + '/../../');
-    this.config = this._configurations[configuration];
+    this.configuration = configuration;
+  }
+
+  get config() {
+    return this._configurations[this.configuration];
   }
 
   get _configurations() {
