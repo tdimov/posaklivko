@@ -1,7 +1,7 @@
 import express from 'express';
 import {Express} from './config/express';
 import {Mongoose} from './config/mongoose';
-import {Routes} from './config/routes';
+import {Routes} from './routes/routes';
 import {Config} from './config/config';
 
 const app = express();
