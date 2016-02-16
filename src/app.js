@@ -12,7 +12,7 @@ export class App {
 
   start() {
     new Express(app, config);
-    new Mongoose(config);
+    new Mongoose(config.dbConnectionString);
     new Routes(app);
 
     app.listen(config.port, () => {

@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 
 export class Mongoose {
-  constructor(config) {
-    this._init(config);
+  constructor(connectionString) {
+    this._init(connectionString);
   }
 
-  _init(config) {
-    mongoose.connect(config.conectionString);
+  _init(connectionString) {
+    mongoose.connect(connectionString);
 
     let db = mongoose.connection;
 
