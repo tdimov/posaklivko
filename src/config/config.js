@@ -7,11 +7,7 @@ export class Config {
   }
 
   get config() {
-    return this._configurations[this.configuration];
-  }
-
-  get _configurations() {
-    return {
+    let configurations = {
       development: {
         rootPath: this.rootPath,
         dbConnectionString: 'mongodb://localhost/my_local_db',
@@ -23,5 +19,7 @@ export class Config {
         port: process.env.PORT || 3000
       }
     };
+    
+    return configurations[this.configuration];
   }
 }
