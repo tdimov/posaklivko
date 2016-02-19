@@ -19,7 +19,7 @@ export class Config {
         port: process.env.PORT || 3000
       }
     };
-    
+
     return configurations[this.configuration];
   }
 }
