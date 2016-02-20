@@ -4,7 +4,7 @@
   "description": "Sample nodejs app with es2015",
   "main": "index.js",
   "scripts": {
-    "start": "node ./app/index.js"
+    "start": "node ./app/src/index.js"
   },
   "author": "Tihomir Dimov",
   "license": "MIT",

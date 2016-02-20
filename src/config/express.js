@@ -9,7 +9,7 @@ export class Express {
 
   _init(app, config) {
     app.set('view engine', 'jade');
-    app.set('views', config.rootPath + 'public/views');
+    app.set('views', config.rootPath + '../public/views');
     app.use(express.static(config.rootPath + '/app/public'));
     app.use(morgan('dev'));
     app.use(bodyParser.json());
