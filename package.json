@@ -16,11 +16,13 @@
     "gulp-babel": "^6.1.2",
     "gulp-jade": "^1.1.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
     "gulp-live-server": "0.0.29",
     "gulp-shell": "^0.5.2",
     "gulp-watch": "^4.3.5",
     "jade": "^1.11.0",
     "jshint": "^2.9.1",
+    "less": "^2.6.0",
     "rimraf": "^2.5.1",
     "run-sequence": "^1.1.5"
   },

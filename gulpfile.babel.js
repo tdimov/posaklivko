@@ -7,6 +7,7 @@ import watch from 'gulp-watch';
 import server from 'gulp-live-server';
 import jshint from 'gulp-jshint';
 import jade from 'gulp-jade';
+import less from 'gulp-less';
 
 const paths = {
   clean: './app',
@@ -21,6 +22,10 @@ const paths = {
   jade: {
     src: ['./public/views/**/*.jade'],
     dest: './app/public/views'
+  },
+  less: {
+    src: ['./public/styles/**/*.less'],
+    dest: './app/public/styles'
   }
 };
 
@@ -29,7 +34,7 @@ gulp.task('default', cb => {
 });
 
 gulp.task('build', cb => {
-  run('clean', 'jshint', 'jade', 'babel', 'restart', cb);
+  run('clean', 'jshint', 'jade', 'less', 'babel', 'restart', cb);
 });
 
 gulp.task('clean', cb => {
@@ -48,9 +53,11 @@ gulp.task('jade', () => {
     .pipe(gulp.dest(paths.jade.dest));
 });
 
-/*gulp.task('babel', shell.task([
-  'babel src --out-dir app/src'
-]));*/
+gulp.task('less', () => {
+  return gulp.src(paths.less.src)
+          .pipe(less({}))
+          .pipe(gulp.dest(paths.less.dest));
+});
 
 gulp.task('babel', () => {
   return gulp.src(paths.jsServer.src)
