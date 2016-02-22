@@ -34,7 +34,7 @@ gulp.task('default', cb => {
 });
 
 gulp.task('build', cb => {
-  run('clean', 'jshint', 'jade', 'less', 'babel', 'restart', cb);
+  run('clean', 'jshint', 'jade', 'less', 'babel', 'babel-public', 'restart', cb);
 });
 
 gulp.task('clean', cb => {
@@ -65,6 +65,14 @@ gulp.task('babel', () => {
             presets: ["es2015-node5", "stage-0"]
           }))
           .pipe(gulp.dest(paths.jsServer.dest));
+});
+
+gulp.task('babel-public', () => {
+  return gulp.src(paths.jsPublic.src)
+          .pipe(babel({
+            presets: ["es2015-node5", "stage-0"]
+          }))
+          .pipe(gulp.dest(paths.jsPublic.dest));
 });
 
 let express;
