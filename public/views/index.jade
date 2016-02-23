@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
   head
     title Web app
-    link(rel="stylesheet" type="text/css" href="styles/style.css")
+    link(rel="stylesheet" type="text/css" href="style.css")
   body
     h1 Jade - node template engine
     #container.col
@@ -11,3 +11,7 @@ html(lang="en")
         templating language with a
         strong focus on performance
         and powerful features.
+    script(src="jspm_packages/system.js")
+    script(src="config.js")
+    script.
+      System.import('scripts/index');
