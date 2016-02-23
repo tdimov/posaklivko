@@ -17,7 +17,7 @@ const paths = {
   },
   jsPublic: {
     src: ['./public/scripts/**/*.js'],
-    dest: './app/public'
+    dest: './app/public/scripts'
   },
   jade: {
     src: ['./public/views/**/*.jade'],
@@ -60,20 +60,20 @@ gulp.task('less', () => {
 });
 
 gulp.task('babel', () => {
-  return gulp.src(paths.jsServer.src)
-          .pipe(babel({
-            presets: ["es2015-node5", "stage-0"]
-          }))
-          .pipe(gulp.dest(paths.jsServer.dest));
+  return babelBuild(paths.jsServer);
 });
 
 gulp.task('babel-public', () => {
-  return gulp.src(paths.jsPublic.src)
+  return babelBuild(paths.jsPublic);
+});
+
+let babelBuild = (paths) => {
+  return gulp.src(paths.src)
           .pipe(babel({
             presets: ["es2015-node5", "stage-0"]
           }))
-          .pipe(gulp.dest(paths.jsPublic.dest));
-});
+          .pipe(gulp.dest(paths.dest));
+};
 
 let express;
 
