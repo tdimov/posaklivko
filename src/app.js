@@ -2,17 +2,17 @@ import express from 'express';
 import {Express} from './config/express';
 import {Mongoose} from './config/mongoose';
 import {Routes} from './routes/routes';
-import {Config} from './config/config';
+import {config} from './config/config';
 
 const app = express();
-const config = new Config('development').config;
+const env = process.env.NODE_ENV || 'development';
 
 export class App {
   constructor() {}
 
   start() {
     new Express(app, config);
-    new Mongoose(config.dbConnectionString);
+    new Mongoose(config[env].dbConnectionString);
     new Routes(app);
 
     app.listen(config.port, () => {
