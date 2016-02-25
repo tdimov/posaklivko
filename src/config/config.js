@@ -7,7 +7,7 @@ export const config = {
     jspmPath: path.normalize(__dirname + '/../../../public'),
     viewsPath: path.normalize(__dirname + '/../../public/views'),
     stylesPath: path.normalize(__dirname + '/../../public/styles'),
-    scriptsPath: path.normalize(__dirname + '/../../public/scripts')
+    scriptsPath: path.normalize(__dirname + '/../../../public/scripts')
   },
   development: {
     dbConnectionString: 'mongodb://localhost/my_local_db'
