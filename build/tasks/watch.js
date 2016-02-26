@@ -1,9 +1,9 @@
 import gulp from 'gulp';
-import watch from 'gulp-watch';
 import {paths} from '../paths';
 
 gulp.task('watch', () => {
-  return watch(paths.jsServer.src, () => {
-    gulp.start('build');
-  });
+  gulp.watch(paths.jsServer.src, ['babel-server']);
+  gulp.watch(paths.jsPublic.src, ['babel-public']);
+  gulp.watch(paths.jade.src, ['jade']);
+  gulp.watch(paths.less.src, ['less']);
 });

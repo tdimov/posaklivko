@@ -7,10 +7,6 @@ export class Routes {
   }
 
   _init(app) {
-    /*app.get('/', (req, res) => {
-      res.send({name: 'tihomir', age: '23'});
-    });*/
-
     app.get('/', (req, res) => {
       res.render('index');
     });
