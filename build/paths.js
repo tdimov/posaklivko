@@ -1,19 +1,19 @@
 export const paths = {
-  clean: './app',
+  clean: './dist',
   jsServer: {
     src: ['./src/**/*.js'],
-    dest: './app/src'
+    dest: './dist/src'
   },
   jsPublic: {
     src: ['./public/scripts/**/*.js'],
-    dest: './app/public/scripts'
+    dest: './dist/public/scripts'
   },
   jade: {
     src: ['./public/views/**/*.jade'],
-    dest: './app/public/views'
+    dest: './dist/public/views'
   },
   less: {
     src: ['./public/styles/**/*.less'],
-    dest: './app/public/styles'
+    dest: './dist/public/styles'
   }
 };
