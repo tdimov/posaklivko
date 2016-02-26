@@ -12,8 +12,8 @@ export const paths = {
     src: ['./public/views/**/*.jade'],
     dest: './dist/public/views'
   },
-  less: {
-    src: ['./public/styles/**/*.less'],
+  sass: {
+    src: ['./public/styles/**/*.scss'],
     dest: './dist/public/styles'
   }
 };

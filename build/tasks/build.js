@@ -3,7 +3,7 @@ import babel from 'gulp-babel';
 import run from 'run-sequence';
 import jshint from 'gulp-jshint';
 import jade from 'gulp-jade';
-import less from 'gulp-less';
+import sass from 'gulp-sass';
 import {paths} from '../paths';
 
 gulp.task('jshint', () => {
@@ -18,10 +18,10 @@ gulp.task('jade', () => {
     .pipe(gulp.dest(paths.jade.dest));
 });
 
-gulp.task('less', () => {
-  return gulp.src(paths.less.src)
-          .pipe(less({}))
-          .pipe(gulp.dest(paths.less.dest));
+gulp.task('sass', function () {
+  return gulp.src(paths.sass.src)
+    .pipe(sass())
+    .pipe(gulp.dest(paths.sass.dest));
 });
 
 gulp.task('babel-server', () => {
@@ -41,5 +41,5 @@ let babelBuild = paths => {
 };
 
 gulp.task('build', cb => {
-  run('clean','jade', 'less', 'jshint', 'babel-server', 'babel-public', 'restart', cb);
+  run('clean','jade', 'sass', 'jshint', 'babel-server', 'babel-public', 'restart', cb);
 });
