@@ -41,5 +41,5 @@ let babelBuild = paths => {
 };
 
 gulp.task('build', cb => {
-  run('clean','jade', 'sass', 'jshint', 'babel-server', 'babel-public', 'restart', cb);
+  run('clean', 'jade', 'sass', 'jshint', 'babel-server', 'babel-public', 'restart', cb);
 });
