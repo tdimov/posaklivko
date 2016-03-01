@@ -9,8 +9,7 @@ export class Express {
 
   _init(app, config) {
     app.set('view engine', 'jade');
-    //app.set('views', config.rootPath + '../public/views');
-    app.use(express.static(config.staticPaths.viewsPath));
+    app.set('views', config.staticPaths.viewsPath);
     app.use(express.static(config.staticPaths.public));
     app.use(express.static(config.staticPaths.jspmPath));
     app.use(express.static(config.staticPaths.stylesPath));

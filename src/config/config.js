@@ -3,10 +3,10 @@ import path from 'path';
 export const config = {
   port: process.env.PORT || 3000,
   staticPaths: {
-    rootPath: path.normalize(__dirname + '/../../'), // remove it if don't need it
+    rootPath: path.normalize(__dirname + '/../../') + '../public/views', // remove it if don't need it
     public: path.normalize(__dirname + '/../../../public'),
     jspmPath: path.normalize(__dirname + '/../../../public/jspm_packages'),
-    viewsPath: path.normalize(__dirname + '/../../public/views'),
+    viewsPath: path.normalize(__dirname + '/../../../public/views'),
     stylesPath: path.normalize(__dirname + '/../../public/styles'),
     scriptsPath: path.normalize(__dirname + '/../../../public/scripts')
   },

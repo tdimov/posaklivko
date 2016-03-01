@@ -11,6 +11,10 @@ export class Routes {
       res.render('index');
     });
 
+    app.get('/about', (req, res) => {
+      res.render('about');
+    });
+
     new CategoryRoutes(app);
     new BookRoutes(app);
   }

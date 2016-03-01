@@ -1,0 +1,55 @@
+extends includes/layout.jade
+
+block content
+  div.page-header
+    h1 What is Posaklivko?
+  div.panel.panel-default
+    div.panel-body
+      p 
+        b Posaklivko 
+        | is basic project struture with basic configurations that helps developers to build beautiful and modern web applications with NodeJS using ECMAScript 2015.
+      h3 Table of contents
+      ul
+        li 
+          a(href="#build-system") Build System
+        li 
+          a(href="#package-manager") Package Manager
+        li 
+          a(href="#folder-structure") Folder Structure
+      h3 Build System
+      p The Build System is used to build your project. The Build System that is used is Gulp. It allows you to do a lot of stuff within your development workflow. For more information visit  
+        a(href="http://gulpjs.com/" target="_blank") Gulp
+      h3 Package Manager
+      p The Package Manager is used for dependency management, which helps no longer have to manually download and manage your scripts. In Posaklivko are used 
+        a(href="http://jspm.io/" target="_blank") jspm 
+        | and 
+        a(href="https://www.npmjs.com/" target="_blank") npm.
+      h3 Folder Structure
+      ul
+        li /build - all gulp tasks
+        li /dist - destination folder for all built files. The folder appears when start gulp task
+        li /node_modules - all packages installed by npm package manager. The folder appears when execute npm install
+        li /pubic - all public files
+          ul
+            li /jspm_packages - all packages installed by jspm package manager. The folder appears when execute jspm install
+            li /scripts - all public script files
+            li /styles - all sass styles files
+            li /views - all views jade files
+            li config.js - js file that jspm SystemJS module loader needs
+        li /server - all server files
+          ul
+            li /config - all configuration files
+              ul
+                li config.js - contains json with configurations
+                li express.js - configuration file for ExpressJS
+                li mongoose.js - configuration file for database
+            li /models - database models
+            li /routes - all routes
+            li /controllers - contains all controllers
+            li app.js - application file
+            li index.js - starting point of the application
+        li .babelrc - babel configurations
+        li .gitignore - contains all ignored git files
+        li .jshintrc - jshint configurations
+        li gulpfile.babel.js - load all gulp tasks
+      
