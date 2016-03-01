@@ -1,8 +1,8 @@
 export const paths = {
   clean: './dist',
   jsServer: {
-    src: ['./src/**/*.js'],
-    dest: './dist/src'
+    src: ['./server/**/*.js'],
+    dest: './dist/server'
   },
   jsPublic: {
     src: ['./public/scripts/**/*.js'],
