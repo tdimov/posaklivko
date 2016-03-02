@@ -15,6 +15,14 @@ export class Routes {
       res.render('about');
     });
 
+    app.get('/contact', (req, res) => {
+      res.render('contact');
+    });
+
+    app.post('/contact', (req, res) => {
+      res.render('contact', {name: req.body.name});
+    });
+
     new CategoryRoutes(app);
     new BookRoutes(app);
   }
