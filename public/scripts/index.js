@@ -6,3 +6,4 @@ import bootstrap from 'bootstrap';
 import popup from 'popup/popup';
 
 console.log("Hello from the other side :D");
+console.log("Hello after changes");
