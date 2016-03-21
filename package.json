@@ -12,6 +12,7 @@
     "babel-cli": "^6.5.1",
     "babel-preset-es2015-node5": "^1.1.2",
     "babel-preset-stage-0": "^6.5.0",
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-jade": "^1.1.0",
@@ -22,8 +23,8 @@
     "jshint": "^2.9.1",
     "jspm": "^0.16.29",
     "require-dir": "^0.3.0",
-    "rimraf": "^2.5.1",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "vinyl-paths": "^2.1.0"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
