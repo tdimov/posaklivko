@@ -1,15 +1,16 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import run from 'run-sequence';
-import jshint from 'gulp-jshint';
+import eslint from 'gulp-eslint';
 import jade from 'gulp-jade';
 import sass from 'gulp-sass';
 import {paths} from '../paths';
 
-gulp.task('jshint', () => {
+gulp.task('lint', () => {
   return gulp.src(paths.jsServer.src, paths.jsPublic.src)
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'));
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 
 gulp.task('jade', () => {
@@ -35,11 +36,12 @@ gulp.task('babel-public', () => {
 let babelBuild = paths => {
   return gulp.src(paths.src)
           .pipe(babel({
-            presets: ["es2015-node5", "stage-0"]
+            presets: ["es2015-node5", "stage-1"],
+            plugins: ['transform-decorators-legacy']
           }))
           .pipe(gulp.dest(paths.dest));
 };
 
 gulp.task('build', cb => {
-  run('clean', 'jade', 'sass', 'jshint', 'babel-server', 'babel-public', 'restart', cb);
+  run('clean', 'jade', 'sass', 'lint', 'babel-server', 'babel-public', 'restart', cb);
 });
