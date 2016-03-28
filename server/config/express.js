@@ -19,7 +19,7 @@ export class Express {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(session({
-      secret: 'posaklivko secret',
+      secret: 'SET HERE YOUR SESSION SECRET',
       proxy: true,
       resave: true,
       saveUninitialized: true
