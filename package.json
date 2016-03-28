@@ -1,13 +1,20 @@
 {
   "name": "Posaklivko",
-  "version": "1.0.0",
-  "description": "Sample nodejs app with es2015",
+  "version": "0.7.2",
+  "description": "Project architecture with basic configurations that helps developers to build modern web applications with NodeJS using ECMAScript2015",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server/index.js"
   },
-  "author": "Tihomir Dimov",
+  "bugs": {
+    "url": "https://github.com/tdimov/posaklivko/issues"
+  },
+  "author": "Tihomir Dimov <tihomirdimov92@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tdimov/posaklivko"
+  },
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-eslint": "^6.0.0-beta.6",
