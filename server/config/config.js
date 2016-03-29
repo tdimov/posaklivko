@@ -4,10 +4,11 @@ export const config = {
   port: process.env.PORT || 3000,
   staticPaths: {
     public: path.normalize(__dirname + '/../../../public'),
-    jspmPath: path.normalize(__dirname + '/../../../public/jspm_packages'),
-    viewsPath: path.normalize(__dirname + '/../../../public/views'),
-    stylesPath: path.normalize(__dirname + '/../../public/styles'),
-    scriptsPath: path.normalize(__dirname + '/../../../public/scripts')
+    jspm: path.normalize(__dirname + '/../../../public/jspm_packages'),
+    views: path.normalize(__dirname + '/../../../public/views'),
+    styles: path.normalize(__dirname + '/../../public/styles'),
+    scripts: path.normalize(__dirname + '/../../../public/scripts'),
+    favicon: path.normalize(__dirname + '/../../../public/images/favicon.ico')
   },
   development: {
     dbConnectionString: 'mongodb://localhost/my_local_db'

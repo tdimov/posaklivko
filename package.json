@@ -1,6 +1,6 @@
 {
-  "name": "Posaklivko",
-  "version": "0.7.2",
+  "name": "posaklivko",
+  "version": "0.7.3",
   "description": "Project architecture with basic configurations that helps developers to build modern web applications with NodeJS using ECMAScript2015",
   "main": "index.js",
   "scripts": {
@@ -41,7 +41,8 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "mongoose": "^4.4.3",
-    "multer": "^1.1.0"
+    "multer": "^1.1.0",
+    "serve-favicon": "^2.3.0"
   },
   "jspm": {
     "directories": {
