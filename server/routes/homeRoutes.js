@@ -14,5 +14,7 @@ export class HomeRoutes {
     app.get('/contact', this.homeController.getContact);
 
     app.post('/contact', this.homeController.postContact);
+
+    app.get('/error', this.homeController.errorPage);
   }
 }

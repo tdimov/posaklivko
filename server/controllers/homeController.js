@@ -17,4 +17,8 @@ export class HomeController {
     let name = req.body.name;
     res.render('contact', {name: name});
   }
+
+  errorPage(req, res) {
+    res.render('error-page');
+  }
 }
