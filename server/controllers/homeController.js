@@ -6,16 +6,16 @@ export class HomeController {
   }
 
   getAbout(req, res) {
-    res.render('about');
+    res.render('home/about');
   }
 
   getContact(req, res) {
-    res.render('contact');
+    res.render('home/contact');
   }
 
   postContact(req, res) {
     let name = req.body.name;
-    res.render('contact', {name: name});
+    res.render('home/contact', {name: name});
   }
 
   errorPage(req, res) {
