@@ -1,5 +1,6 @@
 export const paths = {
   clean: './dist',
+  browserSyncProxy: 'http://localhost:9000',
   jsServer: {
     src: ['./server/**/*.js'],
     dest: './dist/server'

@@ -1,7 +1,7 @@
 import path from 'path';
 
 export const config = {
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 9000,
   staticPaths: {
     public: path.normalize(__dirname + '/../../../public'),
     jspm: path.normalize(__dirname + '/../../../public/jspm_packages'),

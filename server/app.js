@@ -18,7 +18,7 @@ export class App {
     new ErrorHandler(app);
 
     app.listen(config.port, () => {
-      console.log(`Server is up and running on port ${config.port}`);
+      console.log(`Application is up and running...`);
     });
   }
 }
