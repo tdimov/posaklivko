@@ -1,8 +1,10 @@
 import {HomeController} from '../controllers/homeController';
+import {FilesUploader} from '../utils/filesUploader';
 
 export class HomeRoutes {
   constructor (app) {
     this.homeController = new HomeController();
+    this.fileUploader = new FilesUploader();
     this._init(app);
   }
 
@@ -13,7 +15,7 @@ export class HomeRoutes {
 
     app.get('/contact', this.homeController.getContact);
 
-    app.post('/contact', this.homeController.postContact);
+    app.post('/contact', this.fileUploader.uploadMultipleFiles('files'),  this.homeController.postContact);
 
     app.get('/error', this.homeController.errorPage);
   }
