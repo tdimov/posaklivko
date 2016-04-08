@@ -4,8 +4,8 @@ export class ErrorHandler {
   }
 
   _init(app) {
-    app.use(function(req, res, next) {
-      res.status(404).redirect('/error');
+    app.use((req, res, next) => {
+      res.redirect('/error');
     });
   }
 }
